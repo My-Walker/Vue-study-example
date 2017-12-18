@@ -10,8 +10,7 @@
         props: ["todo"],
         methods: {
             deleteTodo () {
-                // console.log(this.todo.id);
-                this.$emit('deleteTodo', this.todo.id);
+                this.$store.dispatch('deleteTodo', this.todo.id);
             }
         }
     }

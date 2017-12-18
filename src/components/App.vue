@@ -3,7 +3,7 @@
 </template>
 
 <script>
-import todoList from './components/todoList';
+import todoList from './todoList';
 export default {
   components: {
     todoList

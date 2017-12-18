@@ -1,6 +1,6 @@
 <template>
     <ul>
-        <li is="item" v-for="todo in todos" :todo="todo" :key="todo.id" @deleteTodo="deleteTodoHandler"></li>
+        <li is="item" v-for="todo in todos" :todo="todo" :key="todo.id"></li>
     </ul>
 </template>
 
@@ -11,12 +11,6 @@ export default {
     props: ["todos"],
     components: {
         item
-    },
-    methods: {
-        deleteTodoHandler (val) {
-            this.$emit('deleteTodo', val);
-            // console.log('list-------');
-        }
     }
 }
 </script>
