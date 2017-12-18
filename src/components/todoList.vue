@@ -13,7 +13,7 @@ import list from './list'
 import axios from 'axios';
 import uuidv4 from 'uuid/v4';
 export default {
-    mounted () {
+    created () {
         axios.get('/api/todos')
             .then( (res) => {
                 console.log('initData = ', res.data);
