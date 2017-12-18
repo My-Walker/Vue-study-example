@@ -6,6 +6,7 @@
 </template>
 
 <script>
+import Bus from '../common/bus';
 export default {
     data () {
         return {
@@ -14,7 +15,7 @@ export default {
     },
     methods: {
         addTodo () {
-            this.$emit('addTodo', this.addText);
+            Bus.$emit('addTodo', this.addText);
         }  
     }
 }

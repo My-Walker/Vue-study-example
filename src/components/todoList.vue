@@ -12,8 +12,13 @@ import adder from './adder'
 import list from './list'
 import axios from 'axios';
 import uuidv4 from 'uuid/v4';
+import Bus from '../common/bus'
 export default {
     mounted () {
+        // Bus注册事件
+        Bus.$on('deleteTodo', this.deleteTodoHandler);
+        Bus.$on('addTodo', this.addTodoHandler);
+        // 获取初始数据
         axios.get('/api/todos')
             .then( (res) => {
                 console.log('initData = ', res.data);

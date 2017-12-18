@@ -6,13 +6,14 @@
 </template>
 
 <script>
-    export default {
-        props: ["todo"],
-        methods: {
-            deleteTodo () {
-                // console.log(this.todo.id);
-                this.$emit('deleteTodo', this.todo.id);
-            }
+import Bus from '../common/bus';
+export default {
+    props: ["todo"],
+    methods: {
+        deleteTodo () {
+            // console.log(this.todo.id);
+            Bus.$emit('deleteTodo', this.todo.id);
         }
     }
+}
 </script>
